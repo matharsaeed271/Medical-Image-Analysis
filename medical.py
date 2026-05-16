@@ -6,14 +6,20 @@ from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.media import Image as AgnoImage
 import streamlit as st
 
-# Set your API Key (Replace with your actual key)
-GEMINI_API_KEY = "your_key"
-os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
+# # Set your API Key (Replace with your actual key)
+# GEMINI_API_KEY = "your_key"
+# os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 
-# Ensure API Key is provided
-if not GEMINI_API_KEY:
-    raise ValueError("your_key")
+# # Ensure API Key is provided
+# if not GEMINI_API_KEY:
+#     raise ValueError("your_key")
 
+# 1. Pull the REAL key from Streamlit Secrets and inject it into the environment
+if "GEMINI_API_KEY" in st.secrets:
+    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
+else:
+    raise ValueError("GEMINI_API_KEY not found in Streamlit Secrets!")
+    
 # Initialize the Medical Agent
 medical_agent = Agent(
     # model=Gemini(id="gemini-2.5-flash"),

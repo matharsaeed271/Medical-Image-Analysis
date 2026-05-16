@@ -8,7 +8,7 @@ import streamlit as st
 
 # Set your API Key (Replace with your actual key)
 GEMINI_API_KEY = "your_key"
-os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 
 # Ensure API Key is provided
 if not GEMINI_API_KEY:

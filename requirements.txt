@@ -2,6 +2,5 @@ agno
 streamlit
 pillow
 google-generativeai
-agno.models.google
-agno.tools.duckduckgo
-agno.media
+duckduckgo-search
+python-dotenv

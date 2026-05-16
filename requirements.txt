@@ -1,6 +1,6 @@
 agno
 streamlit
 pillow
-google-generativeai
+google-genai
 duckduckgo-search
 python-dotenv

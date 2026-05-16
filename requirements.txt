@@ -3,3 +3,6 @@ streamlit
 pillow
 google-generativeai
 duckduckgo-search
+agno.models.google
+agno.tools.duckduckgo
+agno.media

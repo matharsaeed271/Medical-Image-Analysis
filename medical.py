@@ -7,12 +7,12 @@ from agno.media import Image as AgnoImage
 import streamlit as st
 
 # Set your API Key (Replace with your actual key)
-GOOGLE_API_KEY = "GEMINI_API_KEY"
+GOOGLE_API_KEY = "your_key"
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
 # Ensure API Key is provided
 if not GOOGLE_API_KEY:
-    raise ValueError("GEMINI_API_KEY")
+    raise ValueError("your_key")
 
 # Initialize the Medical Agent
 medical_agent = Agent(
